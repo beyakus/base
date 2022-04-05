@@ -21,7 +21,12 @@
     "lib": ["es2020", "dom"],
     "paths": {
       "@shared/*": ["./src/app/shared/*"],
-      "@env/*": ["./src/environments/*"]
+      "@env/*": ["./src/environments/*"],
+      "@config/*": ["./src/app/config/*"],
+      "@helpers/*": ["./src/app/helpers/*"],
+      "@interfaces/*": ["./src/app/interfaces/*"],
+      "@pages/*": ["./src/app/pages/*"],
+      "@services/*": ["./src/app/services/*"]
     }
   },
   "angularCompilerOptions": {

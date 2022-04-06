@@ -7,10 +7,19 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/login/login.module').then((m) => m.LoginModule),
   },
+  {
+    path: '',
+    loadChildren: () =>
+      import('./pages/dasboard/dasboard.module').then((m) => m.DasboardModule),
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

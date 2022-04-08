@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { StatusSidenavService } from '@services/statusSidenav/status-sidenav.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,9 +7,13 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  constructor(private _statusSidenavService: StatusSidenavService) {}
 
   ngOnInit(): void {}
 
   ngOnDestroy() {}
+
+  changeStatus() {
+    this._statusSidenavService.isOpen();
+  }
 }

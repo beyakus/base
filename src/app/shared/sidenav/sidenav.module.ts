@@ -5,11 +5,11 @@ import { SharedTranslatoModule } from '@shared/translator/sharedTranslator.modul
 import { MaterialModule } from '@shared/material/material.module';
 import { SidenavComponent } from './sidenav.component';
 import { NavbarModule } from '../navbar/navbar.module';
-
+import { StatusSidenavService } from '@services/statusSidenav/status-sidenav.service';
 @NgModule({
   declarations: [SidenavComponent],
   imports: [CommonModule, NavbarModule, SharedTranslatoModule, MaterialModule],
   exports: [SidenavComponent],
-  providers: [],
+  providers: [StatusSidenavService],
 })
 export class SidenavModule {}

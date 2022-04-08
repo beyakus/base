@@ -1,6 +1,10 @@
+@import 'variables';
+
 .navbar {
     display: flex;
     justify-content: space-between;
+
+    border-bottom: 0.088rem solid $red;
 
     .navbar__brand{
         display: inherit;

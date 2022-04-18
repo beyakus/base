@@ -2,6 +2,13 @@
   <app-sidenav>
     <section class="container__main--section">
       <h1>Home</h1>
+
+      <cwc-modal id="modal-message" open="true" overlayZIndex="1000">
+        <div class="modal--confirmation">
+          <cwc-icon name="'example'" size="50px" color="'blue'"></cwc-icon>
+          <h3 class="modal--confirmation__message">Hola mundo</h3>
+        </div>
+      </cwc-modal>
     </section>
     <router-outlet></router-outlet>
   </app-sidenav>

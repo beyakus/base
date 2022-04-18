@@ -5,13 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslatorModule } from '@shared/translator/translator.module';
-
+import { CmxWebComponentsModule } from '@cmx-web-components/angular';
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CmxWebComponentsModule.forRoot(),
     TranslatorModule,
   ],
   providers: [],

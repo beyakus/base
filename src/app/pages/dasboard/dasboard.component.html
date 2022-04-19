@@ -1,15 +1,105 @@
-<section class="container__main">
-  <app-sidenav>
-    <section class="container__main--section">
-      <h1>Home</h1>
+<section>
+  <cwc-page [rtl]="rtl">
+    <cwc-header
+      class="show-desktop"
+      slot="header"
+      [showMenuButton]="true"
+      [variant]="variant"
+      [rtl]="rtl"
+      override
+    >
+      <div class="d-flex justify-content-between align-items-center">
+        <cwc-avatar
+          cdkOverlayOrigin
+          class="avatar-content"
+          [name]="userName"
+          [size]="'small'"
+        >
+        </cwc-avatar>
+      </div>
+      <img
+        src="../../../assets/img/cement-company.png"
+        alt="Cemex"
+        class="image__avatar"
+      />
+    </cwc-header>
+    <cwc-sidenav
+      #sideNav
+      slot="sidenav"
+      [width]="width"
+      [variant]="variant"
+      [rtl]="rtl"
+    >
+      <cwc-sidenav-menu id="menuNav" slot="menu-items" [variant]="variant">
+        <cwc-sidenav-menu-item
+          label="No Sub"
+          icon-name="module-control-center"
+          href="#"
+        ></cwc-sidenav-menu-item>
+        <cwc-sidenav-menu-item
+          label="Sub Menu"
+          icon-name="module-order-product-catalogue"
+        >
+          <cwc-sidenav-menu-item
+            label="Link 1"
+            href="#"
+          ></cwc-sidenav-menu-item>
+          <cwc-sidenav-menu-item
+            label="Link 2"
+            href="#"
+          ></cwc-sidenav-menu-item>
+        </cwc-sidenav-menu-item>
+        <cwc-sidenav-menu-item
+          label="2 Level Sub Menu"
+          icon-name="module-customer-information"
+        >
+          <cwc-sidenav-menu-item label="Link" href="#"></cwc-sidenav-menu-item>
+          <cwc-sidenav-menu-item label="Sub Menu">
+            <cwc-sidenav-menu-item
+              label="Link 1"
+              href="#"
+            ></cwc-sidenav-menu-item>
+            <cwc-sidenav-menu-item
+              label="Link 2"
+              href="#"
+            ></cwc-sidenav-menu-item>
+          </cwc-sidenav-menu-item>
+        </cwc-sidenav-menu-item>
 
-      <cwc-modal id="modal-message" open="true" overlayZIndex="1000">
-        <div class="modal--confirmation">
-          <cwc-icon name="'example'" size="50px" color="'blue'"></cwc-icon>
-          <h3 class="modal--confirmation__message">Hola mundo</h3>
-        </div>
-      </cwc-modal>
-    </section>
-    <router-outlet></router-outlet>
-  </app-sidenav>
+        <cwc-sidenav-menu-item
+          label="No Sub"
+          icon-name="module-control-center"
+          id="woot"
+        ></cwc-sidenav-menu-item>
+      </cwc-sidenav-menu>
+      <cwc-footer-menu slot="links" [variant]="variant" [rtl]="rtl">
+        <cwc-footer-menu-item
+          label="Legal"
+          href="{{ termsRoute }}"
+          target="_blank"
+        ></cwc-footer-menu-item>
+        <cwc-footer-menu-item
+          label="Privacy"
+          href="{{ termsPolicy }}"
+          target="_blank"
+        ></cwc-footer-menu-item>
+        <cwc-footer-menu-item
+          label="cemex.com"
+          href="https://www.cemex.com"
+          target="_blank"
+        ></cwc-footer-menu-item>
+      </cwc-footer-menu>
+      <div slot="copyright">
+        © 2017-2021 CEMEX
+        <br />
+        International Holding AG.
+        <br />
+        All rights reserved.
+      </div>
+    </cwc-sidenav>
+    <div slot="main" class="p-3 main">
+      <h1>Hello word</h1>
+      <router-outlet></router-outlet>
+    </div>
+  </cwc-page>
 </section>

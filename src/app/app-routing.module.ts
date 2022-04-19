@@ -4,9 +4,9 @@ import { AuthGuard } from '@services/auth/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: 'auth',
     loadChildren: () =>
-      import('./pages/login/login.module').then((m) => m.LoginModule),
+      import('./pages/auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path: '',

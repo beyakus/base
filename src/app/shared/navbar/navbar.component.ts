@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { StatusSidenavService } from '@services/statusSidenav/status-sidenav.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { StatusSidenavService } from '@services/statusSidenav/status-sidenav.ser
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   constructor(private _statusSidenavService: StatusSidenavService) {}
 
   changeStatus() {

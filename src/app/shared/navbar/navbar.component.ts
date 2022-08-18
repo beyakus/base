@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StatusSidenavService } from '@services/statusSidenav/status-sidenav.service';
 
 @Component({
@@ -8,10 +8,6 @@ import { StatusSidenavService } from '@services/statusSidenav/status-sidenav.ser
 })
 export class NavbarComponent implements OnInit {
   constructor(private _statusSidenavService: StatusSidenavService) {}
-
-  ngOnInit(): void {}
-
-  ngOnDestroy() {}
 
   changeStatus() {
     this._statusSidenavService.isOpen();

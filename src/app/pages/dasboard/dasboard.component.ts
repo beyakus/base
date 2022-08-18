@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dasboard',
   templateUrl: './dasboard.component.html',
   styleUrls: ['./dasboard.component.scss'],
 })
-export class DasboardComponent implements OnInit {
+export class DasboardComponent {
   rtl = false;
   variant = 'positive';
   userName = 'Example user';
@@ -13,8 +13,4 @@ export class DasboardComponent implements OnInit {
   width = '80px';
   termsRoute = '';
   termsPolicy = '';
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

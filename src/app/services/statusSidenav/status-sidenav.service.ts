@@ -11,7 +11,6 @@ import { Subject } from 'rxjs';
 })
 export class StatusSidenavService {
   private status$ = new Subject();
-  constructor() {}
 
   isOpen() {
     this.status$.next('');

@@ -71,7 +71,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run prettier && npm run lint",
-      "pre-push": "ng build --prod"
+      "pre-push": "ng build -c=production --aot"
     }
   },
   "config": {

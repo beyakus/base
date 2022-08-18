@@ -8,8 +8,13 @@ import { NavbarModule } from '../navbar/navbar.module';
 import { StatusSidenavService } from '@services/statusSidenav/status-sidenav.service';
 @NgModule({
   declarations: [SidenavComponent],
-  imports: [CommonModule, NavbarModule, SharedTranslatoModule, MaterialModule],
-  exports: [SidenavComponent],
+  imports: [
+    CommonModule,
+    NavbarModule,
+    SharedTranslatoModule,
+    MaterialModule,
+    SidenavComponent,
+  ],
   providers: [StatusSidenavService],
 })
 export class SidenavModule {}

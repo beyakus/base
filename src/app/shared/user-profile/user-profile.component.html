@@ -1,0 +1,17 @@
+<cwc-avatar
+  [name]="userName"
+  class="cwc-avatar hydrated v2 cwc-avatar--small avatar"
+  design-version="v2"
+  size="small"
+  variant="negative"
+  [matMenuTriggerFor]="menu"
+></cwc-avatar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <span>Perfil</span>
+  </button>
+  <button mat-menu-item (click)="logout()">
+    <span>Cerrar sesión</span>
+  </button>
+</mat-menu>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { menuSidenav } from '@config/menu/menu';
+import { IMenu } from '@config/menu/menu.interfaces';
 
 @Component({
   selector: 'app-dasboard',
@@ -8,9 +10,10 @@ import { Component } from '@angular/core';
 export class DasboardComponent {
   rtl = false;
   variant = 'positive';
-  userName = 'Example user';
   title = 'app';
-  width = '80px';
+  width = '12.5rem';
   termsRoute = '';
   termsPolicy = '';
+
+  menu: IMenu[] = menuSidenav;
 }

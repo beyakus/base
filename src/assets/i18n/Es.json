@@ -1,12 +1,3 @@
 {
-  "shared": {},
-  "auth": {
-    "username": "Correo",
-    "password": "Contraseña",
-    "password-placeholder": "Ingrese la contraseña",
-    "username-placeholder": "Correo de usuario",
-    "button-text": "Entrar",
-    "forgot-password": "Olvidé mi clave",
-    "send": "Enviar"
-  }
+  "shared": {}
 }

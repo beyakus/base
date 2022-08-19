@@ -71,7 +71,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run prettier && npm run lint",
-      "pre-push": "ng build -c=production --aot"
+      "pre-push": "ng build -c=production --aot",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "config": {

@@ -1,6 +1,6 @@
 // Fonts
 $font-size-base: 16px;
-$font-family-base: Roboto, "Helvetica Neue", sans-serif;
+$font-family-base: Roboto, 'Helvetica Neue', sans-serif;
 
 // Colors
 $cemex-blue: #003876;
@@ -16,13 +16,20 @@ $true-red: #ee3d42;
 $darken-5: #b71c1c;
 $lighten-3: #ef9a9a;
 $darken-4: #01579b;
-$lighten-3: #81d4fa;
+$lighten-blue-3: #81d4fa;
+$lighten-5: #81d4fa;
 $darken-3: #ff8f00;
 $lighten-3: #ffcc80;
-$darken-4: #1b5e20;
+$darken-7: #1b5e20;
 $lighten-3: #c5e1a5;
+$bright-green: #7ac943;
 //Custom colors
 $white: #fff;
+$spun-pearl: #adaebb;
+$picton-blue: #40a9f5;
+
+//Transparent colors
+$oslo-gray: #00000065;
 
 //Device size
 $mobile: 30rem; //480px

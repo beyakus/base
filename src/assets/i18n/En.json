@@ -1,3 +1,11 @@
 {
-  "shared": {}
+  "shared": {},
+  "menu": {
+    "menu-1": {
+      "demo": "Demo"
+    }
+  },
+  "demo": {
+    "title": "Demo page"
+  }
 }

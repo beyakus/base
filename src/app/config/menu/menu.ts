@@ -7,8 +7,8 @@ export const menuSidenav: IMenu[] = [
     icon: 'module-document-center',
     subMenu: [
       {
-        name: 'Sub menu',
-        route: '',
+        name: 'menu.menu-1.demo', //Ruta de la traducción
+        route: 'demo',
       },
       {
         name: 'Sub menu',

@@ -7,7 +7,7 @@ const routes: Routes = [
     path: '',
     canActivate: [AuthGuard],
     loadChildren: () =>
-      import('./pages/dasboard/dasboard.module').then((m) => m.DasboardModule),
+      import('./pages/dashboard/dasboard.module').then((m) => m.DasboardModule),
   },
   {
     path: '**',

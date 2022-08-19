@@ -7,7 +7,17 @@ const routes: Routes = [
   {
     path: '',
     component: DasboardComponent,
-    children: [], // TODO Implementar dentro las rutas del dashboard
+    children: [
+      {
+        /*
+         * Todas las rutas deben cargarse en lazy load
+         * Demo
+         */
+        path: 'demo',
+        loadChildren: () =>
+          import('./demo/demo.module').then((m) => m.DemoModule),
+      },
+    ],
   },
 ];
 @NgModule({

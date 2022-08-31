@@ -9,6 +9,8 @@ import { CmxWebComponentsModule } from '@cmx-web-components/angular';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoadingModule } from '@shared/loading/loading.module';
+import { AzureMsalModule } from '@shared/azure-msal/azure-msal.module';
+import { MsalRedirectComponent } from '@azure/msal-angular';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -20,12 +22,11 @@ import { LoadingModule } from '@shared/loading/loading.module';
     LoadingModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    AzureMsalModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, MsalRedirectComponent],
 })
 export class AppModule {}

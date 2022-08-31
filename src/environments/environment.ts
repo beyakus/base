@@ -3,5 +3,9 @@ import { endpoints } from './endpoints';
 export const environment = {
   production: false,
   ...{ endpoints },
-  enableActiveDirectoryLogging: false,
+  enableMsal: false,
+  enableMsalConsole: false,
+  clientId: 'YOUR CLIENTID',
+  authorityUrl: 'YOUR_URL',
+  scopes: ['SCOPE'],
 };

@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from '@services/auth/auth.guard';
+import { MsalGuard } from '@azure/msal-angular';
+import { environment } from '@env/environment';
+
+const guards = environment.enableMsal ? [MsalGuard] : [];
 
 const routes: Routes = [
   {
     path: '',
-    canActivate: [AuthGuard],
+    canActivate: guards,
     loadChildren: () =>
       import('./pages/dashboard/dasboard.module').then((m) => m.DasboardModule),
   },

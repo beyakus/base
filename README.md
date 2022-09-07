@@ -13,6 +13,12 @@ npm install o npm i
 o si se presenta un error durante la instalación
 
 ```sh
+npm install --force
+```
+
+O
+
+```sh
 npm install --legacy-peer-deps
 ```
 
@@ -29,7 +35,11 @@ ng serve o npm start
 ### Generar archivos para producción
 
 ```sh
-ng build --prod
+ng build --configuration=prod
+
+o
+
+npm run build:prod
 ```
 
 ## Paquetes
@@ -45,6 +55,29 @@ ng build --prod
   commits en git
 - [husky](https://typicode.github.io/husky/#/) - Paquete para preparar los
   commits
+
+### MSAL Active Directory
+
+El proyecto ya cuenta con el paquete MSAL para poder integrar el loguin con el
+Active Directory.
+
+En el evironment puedes cambiar las siguiente configuraciones
+
+```sh
+   enableMsal: true,
+   enableMsalConsole: false,
+   clientId: 'YOUR CLIENTID',
+   authorityUrl: 'YOUR_URL',
+   scopes: ['SCOPE'],
+```
+
+enableMsal puede ponerlo en false si desea desactivar el inicio de sesión con el
+directorio activo.
+
+enableMsalConsole puede ponerlo en true si desea activar los mensaje emitidos
+por la librería para debbugear.
+
+El modulo se encuentra en la carpeta shared -> azure-msal
 
 ### Guía de desarrollo
 

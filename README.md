@@ -58,7 +58,7 @@ npm run build:prod
 
 ### MSAL Active Directory
 
-El proyecto ya cuenta con el paquete MSAL para poder integrar el loguin con el
+El proyecto ya cuenta con el paquete MSAL para poder integrar el login con el
 Active Directory.
 
 En el evironment puedes cambiar las siguiente configuraciones

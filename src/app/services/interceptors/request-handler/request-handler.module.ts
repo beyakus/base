@@ -4,6 +4,7 @@ import { ToastrCMModule } from '@shared/toastr/toastr.module';
 import { RequestHandlerInterceptor } from './request-handler.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateService } from '@ngx-translate/core';
+import { MsalInterceptor } from '@azure/msal-angular';
 
 @NgModule({
   declarations: [],
@@ -12,6 +13,11 @@ import { TranslateService } from '@ngx-translate/core';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: RequestHandlerInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: MsalInterceptor,
       multi: true,
     },
     TranslateService,

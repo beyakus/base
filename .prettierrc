@@ -3,7 +3,15 @@
   "tabWidth": 2,
   "jsxBracketSameLine": false,
   "semi": true,
-  "singleQuote": true,
   "proseWrap": "always",
-  "jsxSingleQuote": true
+  "jsxSingleQuote": true,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": ["**/*.css", "**/*.scss", "**/*.html"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
 }

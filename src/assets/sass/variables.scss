@@ -1,13 +1,13 @@
 // Fonts
 $font-size-base: 16px;
-$font-family-base: Roboto, 'Helvetica Neue', sans-serif;
+$font-family-base: roboto, "Helvetica Neue", sans-serif;
 
 // Colors
 $cemex-blue: #003876;
 $dark-blue: #002a59;
 $background-gray: #f4f6f9;
-$medium-gray: #666666;
-$dark-gray: #333333;
+$medium-gray: #666;
+$dark-gray: #333;
 $deep-blue-text: #001b3a;
 $disabled-gray: #d6d6d6;
 $table-row-gray: #e8ebef;
@@ -23,15 +23,16 @@ $lighten-3: #ffcc80;
 $darken-7: #1b5e20;
 $lighten-3: #c5e1a5;
 $bright-green: #7ac943;
-//Custom colors
+
+// Custom colors
 $white: #fff;
 $spun-pearl: #adaebb;
 $picton-blue: #40a9f5;
 
-//Transparent colors
+// Transparent colors
 $oslo-gray: #00000065;
 
-//Device size
-$mobile: 30rem; //480px
-$table: 48rem; //768px
-$desktop: 62rem; //992px
+// Device size
+$mobile: 30rem; // 480px
+$table: 48rem; // 768px
+$desktop: 62rem; // 992px

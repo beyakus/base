@@ -13,7 +13,8 @@
     "prettier": "pretty-quick --staged",
     "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\" --write",
     "after:script": "node script",
-    "build:prod": "ng build --configuration=production --aot && npm run after:script"
+    "build:prod": "ng build --configuration=production --aot && npm run after:script",
+    "stylelint":"npx stylelint **/*.scss"
   },
   "private": true,
   "dependencies": {
@@ -80,7 +81,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier && npm run lint",
+      "pre-commit": "npm run prettier && npm run lint && npm run stylelint",
       "pre-push": "ng build -c=production --aot",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }

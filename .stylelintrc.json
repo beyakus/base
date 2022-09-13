@@ -3,7 +3,14 @@
     "stylelint-config-standard-scss",
     "stylelint-config-prettier-scss"
   ],
+  "ignoreFiles": [
+    "src/assets/sass/variables.scss",
+    "node_modules/**",
+    "dist/**"
+  ],
   "rules": {
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "unit-allowed-list": ["rem", "%", "deg", "em", "pt", "vh", "vw", "s"],
+    "declaration-no-important": true
   }
 }

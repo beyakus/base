@@ -12,9 +12,9 @@ import {
 } from '@azure/msal-angular';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import {
-  MSALGuardConfigFactory,
-  MSALInstanceFactory,
-  MSALInterceptorConfigFactory,
+  msalGuardConfigFactory,
+  msalInstanceFactory,
+  msalInterceptorConfigFactory,
 } from './config';
 
 @NgModule({
@@ -28,15 +28,15 @@ import {
     },
     {
       provide: MSAL_INSTANCE,
-      useFactory: MSALInstanceFactory,
+      useFactory: msalInstanceFactory,
     },
     {
       provide: MSAL_GUARD_CONFIG,
-      useFactory: MSALGuardConfigFactory,
+      useFactory: msalGuardConfigFactory,
     },
     {
       provide: MSAL_INTERCEPTOR_CONFIG,
-      useFactory: MSALInterceptorConfigFactory,
+      useFactory: msalInterceptorConfigFactory,
     },
     MsalService,
     MsalGuard,

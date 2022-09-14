@@ -22,6 +22,17 @@ export class LoadingComponent implements OnInit, AfterViewInit, OnDestroy {
     private _cd: ChangeDetectorRef
   ) {}
 
+  private _listenChangeStatusLoading(): void {
+    const { _UnSubscribe$, _loadingService } = this;
+    _loadingService
+      .listen()
+      .pipe(takeUntil(_UnSubscribe$))
+      .subscribe((status: boolean) => {
+        this.show = status;
+        this._cd.detectChanges();
+      });
+  }
+
   ngOnInit(): void {
     this._listenChangeStatusLoading();
   }
@@ -33,16 +44,5 @@ export class LoadingComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy(): void {
     this._UnSubscribe$.next();
     this._UnSubscribe$.complete();
-  }
-
-  private _listenChangeStatusLoading(): void {
-    const { _UnSubscribe$, _loadingService } = this;
-    _loadingService
-      .listen()
-      .pipe(takeUntil(_UnSubscribe$))
-      .subscribe((status: boolean) => {
-        this.show = status;
-        this._cd.detectChanges();
-      });
   }
 }

@@ -16,10 +16,23 @@ import { excludeMessagesToastPost } from '@config/exclude/excludeMessagesToast';
 @Injectable()
 export class RequestHandlerInterceptor implements HttpInterceptor {
   private _cout = 0;
+
   constructor(
     private _loadingService: LoadingService,
     private _toastrService: ToastrService
   ) {}
+
+  private _excludeMessages(url: string): boolean {
+    const data = excludeMessagesToastPost;
+    let result = false;
+    data.forEach((excludeName) => {
+      if (url.toLowerCase().includes(excludeName.toLowerCase())) {
+        result = true;
+      }
+    });
+
+    return result;
+  }
 
   intercept(
     request: HttpRequest<unknown>,
@@ -54,17 +67,5 @@ export class RequestHandlerInterceptor implements HttpInterceptor {
         }
       })
     );
-  }
-
-  private _excludeMessages(url: string): boolean {
-    const data = excludeMessagesToastPost;
-    let result = false;
-    data.forEach((excludeName) => {
-      if (url.toLowerCase().includes(excludeName.toLowerCase())) {
-        result = true;
-      }
-    });
-
-    return result;
   }
 }

@@ -189,8 +189,8 @@ Ejemplo
 Para los métodos, se debe llevar acabo en el siguiente orden
 
 - Constructor
-- Métodos del ciclo de vida del componente
 - Métodos privados
+- Métodos del ciclo de vida del componente
 - Métodos publicos
 
 Ejemplo
@@ -198,12 +198,12 @@ Ejemplo
 ```sh
  constructor():void{}
 
+ private _getName():void{}
  ngOnchanges():void{}
  ngOnInit():void{}
  ngAfterViewInit():void{}
  ngOnDestroy():void{}
 
- private _getName():void{}
 
  setNameUser():void{}
 ```

@@ -55,6 +55,8 @@ npm run build:prod
   commits en git
 - [husky](https://typicode.github.io/husky/#/) - Paquete para preparar los
   commits
+- [naming-convention](https://typescript-eslint.io/rules/naming-convention/#rule-details) -
+  Rol para EsLint para la conveción de nombres
 
 ### MSAL Active Directory
 

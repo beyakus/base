@@ -14,7 +14,7 @@ import { Subject, takeUntil } from 'rxjs';
   styleUrls: ['./loading.component.scss'],
 })
 export class LoadingComponent implements OnInit, AfterViewInit, OnDestroy {
-  private readonly _UnSubscribe$: Subject<void> = new Subject<void>();
+  private readonly _unSubscribe$: Subject<void> = new Subject<void>();
   show: boolean;
 
   constructor(
@@ -23,10 +23,10 @@ export class LoadingComponent implements OnInit, AfterViewInit, OnDestroy {
   ) {}
 
   private _listenChangeStatusLoading(): void {
-    const { _UnSubscribe$, _loadingService } = this;
+    const { _unSubscribe$, _loadingService } = this;
     _loadingService
       .listen()
-      .pipe(takeUntil(_UnSubscribe$))
+      .pipe(takeUntil(_unSubscribe$))
       .subscribe((status: boolean) => {
         this.show = status;
         this._cd.detectChanges();
@@ -42,7 +42,7 @@ export class LoadingComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this._UnSubscribe$.next();
-    this._UnSubscribe$.complete();
+    this._unSubscribe$.next();
+    this._unSubscribe$.complete();
   }
 }

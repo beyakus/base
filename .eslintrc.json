@@ -56,6 +56,25 @@
               ]
             }
           }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": ["interface"],
+            "prefix": ["I"],
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": ["variable", "function"],
+            "modifiers": ["public"],
+            "format": ["camelCase"]
+          },
+          {
+            "selector": ["classMethod"],
+            "prefix": ["_"],
+            "format": ["camelCase"],
+            "modifiers": ["private"]
+          }
         ]
       }
     },

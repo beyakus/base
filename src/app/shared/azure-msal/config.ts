@@ -22,7 +22,7 @@ export function loggerCallback(logLevel: LogLevel, message: string): void {
   }
 }
 
-export function MSALInstanceFactory(): IPublicClientApplication {
+export function msalInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
       clientId: env.clientId,
@@ -49,7 +49,7 @@ export function MSALInstanceFactory(): IPublicClientApplication {
  * https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-angular/docs/v2-docs/initialization.md#get-tokens-for-web-api-calls
  */
 
-export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
+export function msalInterceptorConfigFactory(): MsalInterceptorConfiguration {
   const protectedResourceMap = new Map<string, Array<string>>();
   // TODO Agregar endpoints
   // protectedResourceMap.set(
@@ -66,7 +66,7 @@ export function MSALInterceptorConfigFactory(): MsalInterceptorConfiguration {
  * Set your default interaction type for MSALGuard here. If you have any
  * additional scopes you want the user to consent upon login, add them here as well.
  */
-export function MSALGuardConfigFactory(): MsalGuardConfiguration {
+export function msalGuardConfigFactory(): MsalGuardConfiguration {
   return {
     interactionType: InteractionType.Redirect,
     authRequest: {

@@ -74,6 +74,10 @@
             "prefix": ["_"],
             "format": ["camelCase"],
             "modifiers": ["private"]
+          },
+          {
+            "selector": ["enum"],
+            "format": ["PascalCase"]
           }
         ]
       }

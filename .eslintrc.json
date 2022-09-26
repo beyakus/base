@@ -9,10 +9,11 @@
         "createDefaultProgram": true
       },
       "extends": [
-        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
-        "plugin:prettier/recommended"
+        "eslint-config-prettier"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -29,6 +30,54 @@
             "type": "element",
             "prefix": "app",
             "style": "kebab-case"
+          }
+        ],
+        "@typescript-eslint/explicit-function-return-type": ["error", {}],
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {
+            "default": {
+              "memberTypes": [
+                "private-decorated-field",
+                "protected-decorated-field",
+                "public-decorated-field",
+                "private-static-field",
+                "private-instance-field",
+                "private-abstract-field",
+                "protected-static-field",
+                "protected-instance-field",
+                "protected-abstract-field",
+                "private-field",
+                "static-field",
+                "public-field",
+                "constructor",
+                "private-method",
+                "public-method"
+              ]
+            }
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": ["interface"],
+            "prefix": ["I"],
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": ["variable", "function"],
+            "modifiers": ["public"],
+            "format": ["camelCase"]
+          },
+          {
+            "selector": ["classMethod"],
+            "prefix": ["_"],
+            "format": ["camelCase"],
+            "modifiers": ["private"]
+          },
+          {
+            "selector": ["enum"],
+            "format": ["PascalCase"]
           }
         ]
       }

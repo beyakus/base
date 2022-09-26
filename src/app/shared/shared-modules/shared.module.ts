@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CmxWebComponentsModule } from '@cmx-web-components/angular';
 import { SharedTranslatoModule } from '@shared/translator/sharedTranslator.module';
@@ -8,6 +8,11 @@ import { SharedTranslatoModule } from '@shared/translator/sharedTranslator.modul
 @NgModule({
   declarations: [],
   imports: [CommonModule],
-  exports: [CmxWebComponentsModule, SharedTranslatoModule, ReactiveFormsModule],
+  exports: [
+    CmxWebComponentsModule,
+    SharedTranslatoModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
 })
 export class SharedModule {}

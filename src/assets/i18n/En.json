@@ -1,12 +1,11 @@
 {
   "shared": {},
-  "auth": {
-    "username": "User Email",
-    "password": "password",
-    "password-placeholder": "Password capture",
-    "username-placeholder": "User email capture",
-    "button-text": "Login",
-    "forgot-password": "Forgot password?",
-    "send": "Send"
+  "menu": {
+    "menu-1": {
+      "demo": "Demo"
+    }
+  },
+  "demo": {
+    "title": "Demo page"
   }
 }

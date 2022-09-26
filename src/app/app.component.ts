@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
+import { MSALBaseComponent } from '@shared/azure-msal/msal';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent extends MSALBaseComponent {}

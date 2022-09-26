@@ -57,6 +57,8 @@ npm run build:prod
   commits
 - [naming-convention](https://typescript-eslint.io/rules/naming-convention/#rule-details) -
   Rol para EsLint para la conveción de nombres
+- [Utils Neoris](https://www.npmjs.com/package/@cmx-lib/utils) - Paquete de
+  custom helpers utilizado en diferentes proyectos Cemex
 
 ### MSAL Active Directory
 

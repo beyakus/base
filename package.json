@@ -14,7 +14,7 @@
     "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html,css,scss}\" --write",
     "after:script": "node script",
     "build:prod": "ng build --configuration=production --aot && npm run after:script",
-    "stylelint":"npx stylelint **/*.scss"
+    "stylelint": "npx stylelint **/*.scss"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +31,7 @@
     "@angular/service-worker": "^14.1.2",
     "@azure/msal-angular": "^2.0.2",
     "@azure/msal-browser": "^2.16.0",
+    "@cmx-lib/utils": "^0.0.4",
     "@cmx-web-components/angular": "^0.9.10",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",

@@ -59,6 +59,8 @@ npm run build:prod
   Rol para EsLint para la conveción de nombres
 - [Utils Neoris](https://www.npmjs.com/package/@cmx-lib/utils) - Paquete de
   custom helpers utilizado en diferentes proyectos Cemex
+- [ValidationForm Neoris](https://www.npmjs.com/package/@cmx-lib/validation) -
+  Directiva para validar formularios
 
 ### MSAL Active Directory
 

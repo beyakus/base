@@ -3,5 +3,15 @@
     <h1>{{ "demo.title" | translate }}</h1>
     <h2>{{ title }}</h2>
     <span>{{ date }}</span>
+    <div>
+      <ng-container [formGroup]="form">
+        <cwc-input
+          label="Agent name"
+          class="input"
+          formControlName="name"
+          appValidateForm
+        ></cwc-input>
+      </ng-container>
+    </div>
   </cwc-card>
 </section>

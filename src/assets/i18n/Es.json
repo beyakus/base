@@ -7,5 +7,10 @@
   },
   "demo": {
     "title": "Página demo"
+  },
+  "messagesForm": {
+    "required": "El campo es requerido",
+    "email": "Correo no válido",
+    "maxlength": "Longitud máxima superada"
   }
 }

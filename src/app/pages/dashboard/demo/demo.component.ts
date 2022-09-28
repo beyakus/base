@@ -17,7 +17,7 @@ export class DemoComponent implements OnInit {
     this.form = this._fb.group({
       name: [
         null,
-        [Validators.required, Validators.maxLength(5), Validators.email],
+        [Validators.required, Validators.maxLength(15), Validators.email],
       ],
     });
   }

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { menuSidenav } from '@config/menu/menu';
 import { IMenu } from '@config/menu/menu.interfaces';
-
 @Component({
   selector: 'app-dasboard',
   templateUrl: './dasboard.component.html',
